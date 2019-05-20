@@ -37,7 +37,7 @@ let crearArchivo = (argv, curso) => {
     });
 }
 
-if (argv.n != "") {
+if (argv.n != null) {
     console.log("\n"+ argv.n + " se ha inscrito al Curso: \n");
     console.table(obtenerCurso(argv.i));
     let curso = obtenerCurso(argv.i);
