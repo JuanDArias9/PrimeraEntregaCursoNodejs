@@ -1,0 +1,4 @@
+*** ESTUDIANTE PREINSCRITO *** 
+Nombre de interesado: Juan
+Cedula de interesado: 1053829863
+Curso Inscrito: Curso de Node.JS con Id 4. Tiene una duración de 32 horas y un valor de 200000 pesos. 

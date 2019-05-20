@@ -1,0 +1,15 @@
+{
+  "name": "primeraentrega",
+  "version": "1.0.1",
+  "description": "Primera Entrega Curso Node.JS TdeA",
+  "main": "app.js",
+  "dependencies": {
+    "yargs": "^13.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan David Arias",
+  "license": "ISC"
+}
