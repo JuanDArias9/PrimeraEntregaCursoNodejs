@@ -38,10 +38,14 @@ let crearArchivo = (argv, curso) => {
 }
 
 if (argv.n != null) {
-    console.log("\n"+ argv.n + " se ha inscrito al Curso: \n");
-    console.table(obtenerCurso(argv.i));
     let curso = obtenerCurso(argv.i);
-    crearArchivo(argv, curso);
+    if(curso){
+        console.log("\n"+ argv.n + " se ha inscrito al Curso: \n");
+        console.table(obtenerCurso(argv.i));        
+        crearArchivo(argv, curso);
+    }else{
+        console.log("\n El Id del curso no existe. \n");
+    }
 }
 else{
     console.log("\n  *** CURSOS OFERTADOS *** \n");
