@@ -4,6 +4,7 @@
   "description": "Primera Entrega Curso Node.JS TdeA",
   "main": "app.js",
   "dependencies": {
+    "express": "^4.17.1",
     "yargs": "^13.2.4"
   },
   "devDependencies": {},

@@ -1,0 +1,1 @@
+*** ESTUDIANTE PREINSCRITO *** <br><b>Nombre de interesado:</b> JuanArias<br><b>Cedula de interesado:</b> 1234567890<br><b>Curso Inscrito:</b> Curso de Economía con Id 2. Tiene una duración de 32 horas y un valor de 170000 pesos. <br>

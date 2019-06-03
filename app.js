@@ -1,5 +1,9 @@
 const {cursos, obtenerCurso} = require('./cursos');
 const fs = require('fs');
+const express = require('express')
+const app = express()
+
+//app.use(express.static(__dirname + '/public'));
 
 const opciones = {
     idCurso: {
@@ -21,11 +25,11 @@ const argv = require('yargs')
     .argv
 
 let crearArchivo = (argv, curso) => {
-    texto = "*** ESTUDIANTE PREINSCRITO *** \n" + 
-            "Nombre de interesado: " + argv.n + '\n' +
-            "Cedula de interesado: " + argv.c + '\n' +
-            "Curso Inscrito: " + curso.nombre + " con Id " + argv.i + ". Tiene una duración de " + curso.duracion +
-            " horas y un valor de " + curso.valor + " pesos. \n";
+    texto = "*** ESTUDIANTE PREINSCRITO *** <br>" + 
+            "<b>Nombre de interesado:</b> " + argv.n + '<br>' +
+            "<b>Cedula de interesado:</b> " + argv.c + '<br>' +
+            "<b>Curso Inscrito:</b> " + curso.nombre + " con Id " + argv.i + ". Tiene una duración de " + curso.duracion +
+            " horas y un valor de " + curso.valor + " pesos. <br>";
 
     fs.writeFile('matricula_' + argv.n + '.txt', texto, (err) =>{
         if (err) {
@@ -50,7 +54,6 @@ if (argv.n != null) {
 else{
     console.log("\n  *** CURSOS OFERTADOS *** \n");
     // Primera forma
-
     /*let i = 0;
     cursos.forEach(element => {
         i++;  
@@ -64,7 +67,6 @@ else{
     });*/
 
     // Segunda forma
-
     console.log("CURSO No 1: \n" + 
     "Id: " + cursos[0].id + "\n" + 
     "Nombre: " + cursos[0].nombre + "\n" +
@@ -95,3 +97,9 @@ else{
     "Costo: " + cursos[3].valor + "\n"); 
     }, 6000);
 }
+ 
+app.get('/', function (req, res) {
+  res.send(texto)
+})
+ 
+app.listen(3008)
