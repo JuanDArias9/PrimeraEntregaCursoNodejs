@@ -9,6 +9,6 @@
 
 #
 
-## Entrega Bonus. Mostrar resultados tarea 1 a través de un navegador.
+## Entrega Bonus. Mostrar resultados tarea 1 a través de un navegador
 ### Se hace uso del puerto 3008 para el ejercicio.
 ### El proyecto genera el archivo .txt y muestra en el navegador la preinscrioción del interesado.
